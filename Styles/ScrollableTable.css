@@ -1,0 +1,48 @@
+
+.ScrollTable{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.ScrollTable thead, .ScrollTable tbody, .ScrollTable tr,
+.ScrollTable th, .ScrollTable tbody tr td{
+    display: block;
+}
+
+.ScrollTable thead tr{
+    width: 99%;
+    
+    width: -webkit-calc(100% - 10px);
+    width:    -moz-calc(100% - 10px);
+    width:         calc(100% - 10px);
+}
+
+.ScrollTable tr:after {  /* clearing float */
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.ScrollTable tbody {
+    height: 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ScrollTable tbody td, .ScrollTable thead th{
+    width: 16.6%;  /* 19% is less than (100% / 5 cols) = 20% */
+    float: left;
+}
+
+.ScrollTable tfoot td{
+    width: 14%;
+}
+
+.ScrollTable thead tr th:first-child, .ScrollTable tbody tr td:first-child{
+    width: 22.5%;
+}
+
+.ScrollTable thead tr th:last-child, .ScrollTable tbody tr td:last-child{
+    width: 11%;
+}
